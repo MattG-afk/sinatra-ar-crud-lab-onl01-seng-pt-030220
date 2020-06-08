@@ -23,6 +23,7 @@ class ApplicationController < Sinatra::Base
 
   post '/articles' do
     Article.create(params)
+    erb :show
   end
 
   get '/articles/:id' do
